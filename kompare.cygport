@@ -6,3 +6,5 @@ RELEASE=1
 CATEGORY="Devel"
 SUMMARY="KDE diff viewer"
 DESCRIPTION="Part of the KDE developer tools suite"
+
+REQUIRES="kate4-part"
