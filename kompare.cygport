@@ -1,8 +1,37 @@
 inherit kf5
 
 NAME="kompare"
-VERSION=17.04.3
+VERSION=17.08.3
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="KDE diff viewer"
 DESCRIPTION="Part of the KDE developer tools suite"
+
+PKG_NAMES="${NAME} ${NAME}5-part"
+kompare_CONTENTS="
+	etc/postinstall/kompare.sh
+	usr/bin/kompare.exe
+	usr/share/applications/org.kde.kompare.desktop
+	usr/share/doc/HTML/*/kompare/
+	usr/share/doc/${NAME}
+	usr/share/icons/hicolor/*/apps/kompare.*
+	usr/share/kxmlgui5/kompare/kompareui.rc
+	usr/share/locale/*/LC_MESSAGES/kompare.mo
+	usr/share/metainfo/org.kde.kompare.appdata.xml
+"
+kompare5_part_CONTENTS="
+	usr/bin/cygkomparedialogpages-5.dll
+	usr/bin/cygkompareinterface-5.dll
+	usr/lib/qt5/plugins/komparenavtreepart.dll
+	usr/lib/qt5/plugins/komparepart.dll
+	usr/share/kservices5/komparenavtreepart.desktop
+	usr/share/kservices5/komparepart.desktop
+	usr/share/kservicetypes5/komparenavigationpart.desktop
+	usr/share/kservicetypes5/kompareviewpart.desktop
+	usr/share/kxmlgui5/kompare/komparepartui.rc
+"
+PKG_IGNORE="
+	usr/include/kompare/kompareinterface.h
+	usr/lib/libkomparedialogpages.dll.a
+	usr/lib/libkompareinterface.dll.a
+"
