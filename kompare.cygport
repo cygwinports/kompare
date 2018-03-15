@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kompare"
-VERSION=17.08.3
+VERSION=17.12.3
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="KDE diff viewer"
@@ -28,7 +28,7 @@ kompare5_part_CONTENTS="
 	usr/share/kservices5/komparepart.desktop
 	usr/share/kservicetypes5/komparenavigationpart.desktop
 	usr/share/kservicetypes5/kompareviewpart.desktop
-	usr/share/kxmlgui5/kompare/komparepartui.rc
+	usr/share/kxmlgui5/komparepart/komparepartui.rc
 "
 PKG_IGNORE="
 	usr/include/kompare/kompareinterface.h
